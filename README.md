@@ -2,7 +2,7 @@
 
 A university project  for the postgraduate class of Data Mining.
 
-We were given a train_set with geographical points paired with the time interval. Firstly, we cleaned the dataset and then we formed the trajectories (with the corresponding route id).
+We were given a train_set with geographical points paired with the time interval. Firstly, we cleaned the dataset and then we formed the trajectories (with the corresponding route id). The last step of this part was to filter out some trajectories based on _their total_distance and max distance (between two of their points).
 
 The goal of this project was firstly to compute trajectory similarity between trajectories of test_set_a1/a2.csv and the train_set.csv. 
 

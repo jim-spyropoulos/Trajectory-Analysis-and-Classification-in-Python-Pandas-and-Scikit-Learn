@@ -40,9 +40,9 @@ df=pd.read_csv("grids.csv")
 #print df
 
 le = preprocessing.LabelEncoder()
-le.fit(df["JourneyPatternId"])
-Y_train=le.transform(df["JourneyPatternId"])
-X_train1=df['Grids'] 
+le.fit(df["TripId"])
+Y_train=le.transform(df["TripId"])
+X_train1=df['Grids']
 
 
 
@@ -50,8 +50,8 @@ X_train=np.array(X_train1)
 
 vectorizer=CountVectorizer()
 transformer=TfidfTransformer()
-svd=TruncatedSVD(n_components=300, random_state=42) 
-kf = KFold(len(X_train), n_folds=10) 
+svd=TruncatedSVD(n_components=300, random_state=42)
+kf = KFold(len(X_train), n_folds=10)
 
 #Our best method
 #			voting classifier of 3 classifiers
